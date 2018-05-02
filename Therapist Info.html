@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link href="./jquery.multiselect.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./jquery.multiselect.js"></script>
+</head>
+<body>
+<h2> Therapist Information</h2>
+  <script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+</script>
+<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname">
+<input type="submit" value="Save">
+</form>
+<p> Units oriented to</p>
+    <select name="basic[]" multiple="multiple" class="3col active">
+        <option value="AL">55</option>
+        <option value="AK">56</option>
+        <option value="AZ">62</option>
+        <option value="AR">63</option>
+        <option value="CA">NICU</option>
+        <option value="CO">SICU</option>
+    </select>
+<p> Preferred Units</p>
+    <select name="basic[]" multiple="multiple" class="3col active">
+        <option value="AL">55</option>
+        <option value="AK">56</option>
+        <option value="AZ">62</option>
+        <option value="AR">63</option>
+        <option value="CA">NICU</option>
+        <option value="CO">SICU</option>
+    </select>
+    <script>
+    $(function () {
+        $('select[multiple].active.3col').multiselect({
+            columns: 2,
+            placeholder: 'Select Units',
+            search: false,
+            searchOptions: {
+                'default': 'Search States'
+            },
+            selectAll: true
+        });
+
+    });
+</script>
+<div textbox
+<div ng-controller="ExampleController">
+  <form name="myForm">
+    <label for="singleSelect"> Primary Unit: </label><br>
+    <select name="singleSelect" ng-model="data.singleSelect">
+      <option value="option-1">  </option>
+      <option value="option-2">56</option>
+      <option value="option-3">57</option>
+    </select><br>
+</body>
+</html>

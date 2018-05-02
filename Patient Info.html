@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Initials must be filled out");
+        return false;
+    }
+}
+</script>
+<body>
+  <h2> Patient Information </h2>
+	<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+Initials: <input type="text" name="fname">
+<input type="submit" value="Save">
+</form>
+<div textbox
+<div ng-controller="ExampleController">
+  <form name="myForm">
+    <label for="singleSelect"> Unit: </label><br>
+    <select name="singleSelect" ng-model="data.singleSelect">
+      <option value="option-1">  </option>
+      <option value="option-2">56</option>
+      <option value="option-3">57</option>
+    </select><br>
+
+    <label for="singleSelect"> Frequency: </label><br>
+    <select name="singleSelect" id="singleSelect" ng-model="data.singleSelect">
+      <option value="{{data.option1}}">  </option> <!-- interpolation -->
+      <option value="option-2">3x</option>
+      <option value="option-3">5x</option>
+      <option value="option-4">7x</option>
+      <option value="option-5">Weekly</option>
+      <option value="option-6">Eval</option>
+      <option value="option-7">Renew</option>
+    </select><br>
+</body>
+</html>

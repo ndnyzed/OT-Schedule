@@ -1,0 +1,37 @@
+
+<html>
+<head>
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link href="./jquery.multiselect.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./jquery.multiselect.js"></script>
+</head>
+<body>
+    <h2> Therapists Working Today</h2>
+    <select name="basic[]" multiple="multiple" class="3col active">
+        <option value="AL">Kristine</option>
+        <option value="AK">Nels</option>
+        <option value="AZ">Martin</option>
+        <option value="AR">Patty</option>
+        <option value="CA">Melissa</option>
+        <option value="CO">Mike</option>
+    </select>
+
+    <script>
+    $(function () {
+        $('select[multiple].active.3col').multiselect({
+            columns: 3,
+            placeholder: 'Select Therapists',
+            search: false,
+            searchOptions: {
+                'default': 'Search States'
+            },
+            selectAll: true
+        });
+
+    });
+</script>
+<input type="submit" value="Save">
+</body>
+</html>
